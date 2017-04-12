@@ -8,7 +8,7 @@ You can view the documentation [directly](/docs/index.md) in this repository, or
 ## Development
 We use [MkDocs](http://www.mkdocs.org/) to create a static site from this repository. For local development,
 
-Make sure you have Python2.7 installed.
+Make sure you have [Python2.7](Install_Python.md) installed.
 1. Upgrade Pip to latest installation. `pip install --upgrade pip`
 1. [Install MkDocs](http://www.mkdocs.org/#installation). `pip install mkdocs`
 1. Install v0.2.4 of the [MkDocs Material theme](https://github.com/squidfunk/mkdocs-material). `pip install mkdocs-material==0.2.4`
