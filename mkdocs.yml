@@ -1,16 +1,16 @@
 # Project Information
-site_name: PagerDuty Incident Response Documentation
-site_description: A collection of information about the PagerDuty incident response process. Not only how to prepare new employees for on-call responsibilities, but also how to handle major incidents, both in preparation and after-work.
-site_author: PagerDuty, Inc.
+site_name: MNX Solutions Incident Response Documentation
+site_description: A collection of information about the MNX Solutions incident response process. Not only how to prepare new employees for on-call responsibilities, but also how to handle major incidents, both in preparation and after-work.
+site_author: MNX Solutions, LLC.
 site_favicon: 'assets/img/icon.png'
-site_url: https://response.pagerduty.com
+site_url: https://response.mnxsolutions.com
 
 # Repository
 repo_name: 'GitHub'
-repo_url: https://github.com/pagerduty/incident-response-docs
+repo_url: https://github.com/mnx-solutions/incident-response-docs
 
 # Copyright
-copyright: 'Copyright &copy; PagerDuty, Inc.'
+copyright: 'Copyright &copy; MNX Solutions, LLC.'
 
 # Theme
 theme: 'material'
@@ -26,8 +26,8 @@ extra:
     text: 'Colfax Regular'
     code: 'Roboto Mono'
   author:
-    github: 'PagerDuty'
-    twitter: 'PagerDuty'
+    github: 'mnx-solutions'
+    twitter: 'MNXSolutions'
 
 # Contents
 pages:
@@ -62,7 +62,7 @@ pages:
   - About: 'about.md'
 
 # Analytics
-google_analytics: ['UA-8759953-1', 'auto']
+#google_analytics: ['UA-8759953-1', 'auto']
 
 # Extensions
 markdown_extensions:
