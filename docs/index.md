@@ -1,6 +1,6 @@
-This documentation covers parts of the PagerDuty Incident Response process. It is a cut-down version of our internal documentation, used at PagerDuty for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after. It is intended to be used by on-call practitioners and those involved in an operational incident response process (or those wishing to enact a formal incident response process). See the [about page](about.md) for more information on what this documentation is and why it exists.
+This documentation covers parts of the MNX Solutions Incident Response process. It is a cut-down version of our internal documentation, used at MNX Solutions for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after. It is intended to be used by on-call practitioners and those involved in an operational incident response process (or those wishing to enact a formal incident response process). See the [about page](about.md) for more information on what this documentation is and why it exists.
 
-![Incident Response at PagerDuty](./assets/img/headers/pagerduty_ir.jpg)
+![Incident Response at MNX Solutions](./assets/img/headers/pagerduty_ir.jpg)
 
 ## Being On-Call
 
