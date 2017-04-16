@@ -21,6 +21,7 @@ Make sure you have [Python2.7](Install_Python.md) installed.
         aws s3 sync ./site/ s3://[BUCKET_NAME] \
           --acl public-read \
           --exclude "*.py*" \
+	  --exclude "logs*" \
           --delete
 
 ## License
