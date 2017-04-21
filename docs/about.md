@@ -1,4 +1,4 @@
-This site documents parts of the PagerDuty Incident Response process. It is a cut-down version of our internal documentation, used at PagerDuty for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after.
+This site documents parts of the MNX Solutions Incident Response process. It is a cut-down version of our internal documentation, used at MNX Solutions for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after.
 
 Few companies seem to talk about their internal processes for dealing with major incidents. We would like to change that by opening up our documentation to the community, in the hopes that it proves useful to others who may want to formalize their own processes. Additionally, it provides an opportunity for others to suggest improvements, which ends up helping everyone.
 
@@ -20,7 +20,7 @@ Anything from preparing to [go on-call](/oncall/being_oncall.md), definitions of
 
 ## What is missing?
 
-This isn't an exact clone of our internal documentation, but instead has some information removed. Things such as our phone bridge numbers, names of internal tools and systems which are not (yet) open sourced, images of our dashboards, etc. Basically anything that is specific to PagerDuty or is too sensitive to share.
+Seeing this is a clone of [PagerDuty's Incident Response Plan](https://response.pagerduty.com/), we are working toward convirting the examples and process to our own. There may be phone numbers, internal tools not yet added or formalized. When something new if found, we should review it and add to the [Github Repo](https://github.com/mnx-solutions/incident-response-docs) as needed.
 
 ## License
 
