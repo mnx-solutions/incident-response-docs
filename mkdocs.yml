@@ -1,16 +1,16 @@
 # Project Information
-site_name: MNX Solutions Incident Response Documentation
+config.site_name: MNX Solutions Incident Response Documentation
 site_description: A collection of information about the MNX Solutions incident response process. Not only how to prepare new employees for on-call responsibilities, but also how to handle major incidents, both in preparation and after-work.
-site_author: MNX Solutions, LLC.
+config.site_author: MNX Solutions, LLC.
 site_favicon: 'assets/img/icon.png'
-site_url: https://response.mnxsolutions.com
+config.site_url: https://response.mnxsolutions.com
 
 # Repository
-repo_name: 'GitHub'
-repo_url: https://github.com/mnx-solutions/incident-response-docs
+config.repo_name: 'GitHub'
+config.repo_url: https://github.com/mnx-solutions/incident-response-docs
 
 # Copyright
-copyright: 'Copyright &copy; MNX Solutions, LLC.'
+config.copyright: 'Copyright &copy; 2017 MNX Solutions, LLC.'
 
 # Theme
 theme: 'material'
@@ -66,6 +66,6 @@ pages:
 
 # Extensions
 markdown_extensions:
-  - toc(permalink=#)
+  - page.toc(permalink=#)
   - sane_lists:
   - admonition:
