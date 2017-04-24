@@ -1,115 +1,98 @@
-The first step in any incident response process is to determine what actually [constitutes an incident](/before/what_is_an_incident.md). Incidents can then be classified by severity, usually done by using "SEV" definitions, with lower numbered severities being more urgent. Operational issues can be classified at one of these severity levels, and in general you are able to take more risky moves to resolve a higher severity issue. Anything above a SEV-3 is automatically considered a "major incident" and gets a more intensive response than a normal incident.
+The first step in any incident response process is to determine what actually [constitutes an incident](/before/what_is_an_incident.md). Incidents can then be classified by critical, high, medium, and low. Operational issues can be classified at one of those levels, and in general you are able to take more risky moves to resolve a higher severity issue. Anything above medium is automatically considered a "major incident" and gets a more intensive response than a normal incident.
 
 !!! note "Always Assume The Worst"
-     If you are unsure which level an incident is (e.g. not sure if SEV-2 or SEV-1), **treat it as the higher one**. During an incident is not the time to discuss or litigate severities, just assume the highest and review during a post-mortem.
+     If you are unsure which level an incident is (e.g. not sure if High or Critical), **treat it as the higher one**. During an incident is not the time to discuss or litigate severities, just assume the highest and review during a post-mortem.
 
-!!! question "Can a SEV-3 be a major incident?"
-     All SEV-2's are major incidents, but not all major incidents need to be SEV-2's. If you require co-ordinated response, even for lower severity issues, then trigger our incident response process. The IC can make a determination on whether full incident response is necessary.
+!!! question "Can a Medium be a major incident?"
+     All Medium priorities are major incidents, but not all major incidents need to be classified as Medium. If you require co-ordinated response, even for lower severity issues, then trigger our incident response process. The IC can make a determination on whether full incident response is necessary.
 
 <table class="custom-table">
   <thead>
     <tr>
-      <th class="sev">Severity</th>
+      <th class="priority">Priority</th>
       <th>Description</th>
       <th>Typical Response</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td class="sev-1">SEV-1</td>
+      <td class="critical">Critical</td>
       <td>
-        <p class="intent">Critical issue that warrants public notification and liaison with executive teams.</p>
+        <p class="intent">Critical issue that warrants customer or public notification.</p>
         <ul>
-          <li>The system is in a critical state and is actively impacting a large number of customers.</li>
-          <li>Functionality has been severely impaired for a long time, breaking SLA.</li>
+          <li>The system is in a critical state or down.</li>
+          <li>Service issue(s) (Ex. Apache/Nginx/MySQL/Disk/etc...) that is affected customer application/website(s)</li>
           <li>Customer-data-exposing security vulnerability has come to our attention.</li>
+          <li>MNX.io Hypervisor or Portal Issue.</li>
         </ul>
       </td>
       <td>
         <p class="response">Major incident response.</p>
         <ul>
-          <li>Page an IC in Slack <code>!ic page</code>.</li>
           <li>See <a href="/during/during_an_incident">During an Incident</a>.</li>
-          <li>Notify internal stakeholders.</li>
-          <li>Public notification.</li>
+          <li>Open Tickets with Customers.</li>
+          <li>Notify team in Slack #general Channel.</li>
+          <li>Public notification if this is MNX.io related that involves one or more customers.</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td class="sev-2">SEV-2</td>
+      <td class="high">High</td>
       <td>
         <p class="intent">Critical system issue actively impacting many customers' ability to use the product.</p>
         <ul>
-          <li>Notification pipeline is severely impaired.</li>
-          <li>Incident response functionality (ack, resolve, etc) is severely impaired.</li>
-          <li>Web app is unavailable or experiencing severe performance degradation for most/all users.</li>
-          <li>Monitoring of PagerDuty systems for major incident conditions is impaired.</li>
-          <li>Any other event to which a PagerDuty employee deems necessary of incident response.</li>
+          <li>The system is in a vulnerable state.</li>
+          <li>Service not directly impacted but can be soon (Ex. Disk filling up that could cause service outage if not handled).</li>
+          <li>Cron jobs not executing that could cause issues later down the road in providing responses.</li>
+          <li>Any other event to which a MNX Solutions employee deems necessary of incident response.</li>
         </ul>
       </td>
       <td>
-        <p class="response">Major incident response.</p>
+        <p class="response">High-Urgency Page.</p>
         <ul>
-          <li>Page an IC in Slack <code>!ic page</code>.</li>
           <li>See <a href="/during/during_an_incident">During an Incident</a>.</li>
+          <li>Open Tickets with Customers.</li>
+          <li>Notify team in Slack #general Channel.</li>
         </ul>
     </tr>
     <tr>
-      <td class="warning" colspan="3">Anything above this line is considered a "Major Incident". Our incident response process should be triggered for any major incidents.</td>
+      <td class="warning" colspan="3">Anything above this line is considered a "Major Incident" and will page our on call person. Our incident response process should be triggered for any major incidents.</td>
     </tr>
     <tr>
-      <td class="sev-3">SEV-3</td>
+      <td class="medium">Medium</td>
       <td>
-        <p class="intent">Stability or minor customer-impacting issues that require immediate attention from service owners.</p>
+        <p class="intent">Stability or minor customer-impacting issues that require attention from ticket owners.</p>
         <ul>
-          <li>Partial loss of functionality, not affecting majority of customers.</li>
-          <li>Something that has the likelihood of becoming a SEV-2 if nothing is done.</li>
-          <li>No redundancy in a service (failure of 1 more node will cause outage).</li>
+          <li>Ad-Hoc/Project based work that needs to be handled during a time period to prevent a major issues.</li>
+          <li>SSL Certificates that are about to expire in the coming weeks.</li>
+          <li>Something that has the likelihood of becoming High Priority if nothing is done (IE, LogRotate not configured properly, etc...).</li>
         </ul>
       </td>
       <td>
-        <p class="response">High-Urgency page to service team.</p>
+        <p class="response">Medium Ticket Creation.</p>
         <ul>
-          <li>Work on issue as your top priority.</li>
-          <li>Liaise with engineers of affected systems to identify cause.</li>
-          <li>If related to recent deployment, rollback.</li>
-          <li>Monitor status and notice if/when it escalates.</li>
-          <li>Mention on Slack if you think it has the potential to escalate.</li>
-          <li>Trigger incident response if necessary (<code>!ic page</code>).</li>
+          <li>Work on these after you have completed all tasks with higher priorities.</li>
+          <li>Work on tickets/issues as assigned.</li>
+          <li>Keep in contact with customer and notify of any impending issues/delays..</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td class="sev-4">SEV-4</td>
+      <td class="low">Low</td>
       <td>
         <p class="intent">Minor issues requiring action, but not affecting customer ability to use the product.</p>
         <ul>
-          <li>Performance issues (delays, etc).</li>
-          <li>Individual host failure (i.e. one node out of a cluster).</li>
-          <li>Delayed job failure (not impacting event & notification pipeline).</li>
-          <li>Cron failure (not impacting event & notification pipeline).</li>
+          <li>Ad-Hoc/Project based work..</li>
+          <li>Migration based projects of sites/servers.</li>
+          <li>Installing packages/reconfiguring configuration files/services.</li>
         </ul>
       </td>
       <td>
-        <p class="response">Low-Urgency page to service team.</p>
+        <p class="response">Low Ticket Creation.</p>
         <ul>
-          <li>Work on the issue as your first priority (above "normal" tasks).</li>
-          <li>Monitor status and notice if/when it escalates.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td class="sev-5">SEV-5</td>
-      <td>
-        <p class="intent">Cosmetic issues or bugs, not affecting customer ability to use the product.</li>
-        <ul>
-          <li>Bugs not impacting the immediate ability to use the system.</li>
-        </ul>
-      </td>
-      <td>
-        <p class="response">JIRA ticket.</p>
-        <ul>
-          <li>Create a JIRA ticket and assign to owner of affected system.</li>
+          <li>Work on these after you have completed all tasks with higher priorities.</li>
+          <li>Work on tickets/issues as assigned.</li>
+          <li>Keep in contact with customer and notify of any impending issues/delays..</li>
         </ul>
       </td>
     </tr>
@@ -117,4 +100,4 @@ The first step in any incident response process is to determine what actually [c
 </table>
 
 !!! note "Be Specific"
-    These severity descriptions have been changed from the PagerDuty internal definitions to be more generic. For your own documentation, you are encouraged to make your definitions very specific, usually referring to a % of users/accounts affected. You will usually want your severity definitions to be metric driven.
+    These priority descriptions have been changed from the PagerDuty internal definitions to be more generic. For your own documentation, you are encouraged to make your definitions very specific, usually referring to a % of users/accounts affected. You will usually want your severity definitions to be metric driven.
