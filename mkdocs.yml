@@ -1,5 +1,5 @@
 # Project Information
-config.site_name: MNX Solutions Incident Response Documentation
+site_name: MNX Solutions Incident Response Documentation
 site_description: A collection of information about the MNX Solutions incident response process. Not only how to prepare new employees for on-call responsibilities, but also how to handle major incidents, both in preparation and after-work.
 config.site_author: MNX Solutions, LLC.
 site_favicon: 'assets/img/icon.png'
