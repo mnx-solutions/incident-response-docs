@@ -1,5 +1,5 @@
 # MNX Solutions Incident Response Documentation [![Build Status](https://travis-ci.com/PagerDuty/incident-response-docs.svg?token=zdc1SxQUyY3TG9TLD3Xz&branch=master)](https://travis-ci.com/PagerDuty/incident-response-docs)
-This is a public version of the Incident Response process used at mnxsolutions. It is also used to prepare new employees for on-call responsibilities, and provides information not only on preparing for an incident, but also what to do during and after. See the [about page](docs/about.md) for more information on what this documentation is and why it exists.
+This is a private version of the Incident Response process used at mnxsolutions. It is also used to prepare new employees for on-call responsibilities, and provides information not only on preparing for an incident, but also what to do during and after. See the [about page](docs/about.md) for more information on what this documentation is and why it exists.
 
 You can view the documentation [directly](/docs/index.md) in this repository, or rendered as a website at https://response.mnxsolutions.com.
 
@@ -18,7 +18,7 @@ Make sure you have [Python2.7](Install_Python.md) installed.
 1. Run `mkdocs build --clean` to produce the static site for upload.
 1. Upload the `site` directory to S3 (or wherever you would like it to be hosted).
 
-        aws s3 sync ./site/ s3://[BUCKET_NAME] \
+        aws s3 sync ./site/ s3://response.mnxsolutions.com \
           --acl public-read \
           --exclude "*.py*" \
 	  --exclude "logs*" \
