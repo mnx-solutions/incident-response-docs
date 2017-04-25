@@ -1,6 +1,6 @@
-For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.
+For every major incident (Critical/High), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.
 
-![Post-Mortem](../assets/img/headers/pagerduty_post_mortem.jpg)
+![Post-Mortem](../assets/img/headers/mnxsolutions_post_mortem.jpg)
 
 !!! warning "Don't Neglect the Post-Mortem"
     Don't make the mistake of neglecting a post-mortem after an incident. Without a post-mortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless post-mortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.
@@ -11,17 +11,17 @@ The first step is that a post-mortem owner will be designated. This is done by t
 ## Owner Responsibilities
 As owner of a post-mortem, you are responsible for the following,
 
-* Scheduling the post-mortem meeting (on the shared calendar) and inviting the relevant people (this should be scheduled within 5 business days of the incident).
+* Scheduling the post-mortem meeting (on the shared MNX-OOO calendar) and inviting the relevant people (this should be scheduled within 5 business days of the incident).
 * Updating the page with all of the necessary content.
-* Investigating the incident, pulling in whomever you need from other teams to assist in the investigation.
-* Creating follow-up JIRA tickets (_You are only responsible for creating the tickets, not following them up to resolution_).
+* Investigating the incident, pulling in whomever you need from the team to assist in the investigation.
+* Creating follow-up tickets or Asana Projects (_You are only responsible for creating the tickets, not following them up to resolution_).
 * Running the post-mortem meeting (_these generally run themselves, but you should get people back on topic if the conversation starts to wander_).
 * In cases where we need a public blog post, creating & reviewing it with appropriate parties.
 
 ## Post-Mortem Wiki Page
 Once you've been designated as the owner of a post-mortem, you should start updating the page with all the relevant information.
 
-1. (If not already done by the IC) Create a new post-mortem page for the incident.
+1. (If not already done by the On-Call Person) Create a new post-mortem page for the incident.
 
 1. Schedule a post-mortem meeting for within 5 business days of the incident. You should schedule this before filling in the page, just so it's on the calendar.
     * Create the meeting on the "Incident Post-Mortem Meetings" shared calendar.
@@ -29,22 +29,22 @@ Once you've been designated as the owner of a post-mortem, you should start upda
 1. Begin populating the page with all of the information you have.
     * The timeline should be the main focus to begin with.
         * The timeline should include important changes in status/impact, and also key actions taken by responders.
-        * You should mark the start of the incident in red, and the resolution in green (for when we went into/out of SEV).
+        * You should mark the start of the incident in red, and the resolution in green (for when we went into/out of Critical/High Priority).
     * Go through the history in Slack to identify the responders, and add them to the page.
-        * Identify the Incident Commander and Scribe in this list.
+        * Identify the On-Call Person and any other people involved in the incident.
 
 1. Populate the page with more detailed information.
-    * For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a Tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.
+    * For each item in the timeline, identify a metric ([Grafana](https://grafana.mnxsolutions.com) or [Nagios](https://nagios.mnxsolutions.com)), where the data came from. Anything which shows the data point you're trying to illustrate in the timeline.
 
 1. Perform an analysis of the incident.
     * Capture all available data regarding the incident. What caused it, how many customers were affected, etc.
     * Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.
-    * Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)
+    * Capture the impact to customers (Site Down, MySQL Issue affected select queries, etc...)
     * Identify the underlying cause of the incident (What happened, and why did it happen).
 
-1. Create any followup action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),
+1. Create any followup action tickets or Asana Projects (or note down topics for discussion if we need to decide on a direction to go before creating tickets),
     * Go through the history in Slack to identify any TODO items.
-    * Label all tickets with their severity level and date tags.
+    * Label all tickets with their priority level and date tags.
     * Any actions which can reduce re-occurrence of the incident.
         * (There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).
     * Identify any actions which can make our incident response process better.
@@ -60,11 +60,11 @@ These meetings should generally last 15-30 minutes, and are intended to be a wra
 You should invite the following people to the post-mortem meeting,
 
 * Always
-    * The incident commander.
-    * Service owners involved in the incident.
+    * The on-call person.
+    * Other team members involved in the incident.
     * Key engineer(s)/responders involved in the incident.
 * Optional
-    * Customer liaison. (Only SEV-1 incidents)
+    * Customer liaison. (Only Critical incidents)
 
 A general agenda for the meeting would be something like,
 

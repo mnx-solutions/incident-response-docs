@@ -3,33 +3,19 @@ Information on what to do after a major incident. Our followup and after action 
 ## Followup Actions for Response Roles
 In addition to any direct followup items generated from an incident, each of our response roles will have a few standard followup tasks. These are generally lightweight actions that ensure we organize information and followup with customers appropriately.
 
-### Steps for Incident Commander
+### Steps for On-Call Person
 
 1. Create the post-mortem page from the template, and assign an owner to the post-mortem for the incident.
+    * Add tasks of cleanup actions. (If you are not free, assign someone to handle these tasks)
+    * Contact the customer if post-tasks require service restarts or changes to customer systems.
+    * Review the Slack Communication and save any needed/relivent information.
 
-1. Send out an internal email to the relevant stakeholders explaining that we had an incident, provide a link to the post-mortem.
+1. Send out an internal email to our group (support@mnxsolutions.com) that we had an incident, provide a link to the post-mortem or a discription of what happened and what post-tasks are needed.
+    * Others should provide feedback/help as needed.
 
 1. Occasionally check on the progress of the post-mortem to ensure that it is completed within the desired time frame.
 
-### Steps for Deputy
-There are no additional steps after an incident is resolved. However the IC may ask for your help with their steps.
-
-### Steps for Scribe
-
-1. Review the chat communications and extract any relevant items from key events.
-
-1. Collect all `TODO` items and add them to the post-mortem.
-
-### Steps for Subject Matter Experts
-
-1. Add any notes you think are relevant to the post-mortem.
-
-### Steps for Customer Liaison
-
-1. Reply to any customer enquiries we received about the incident.
-
-1. Follow the post-mortem progress, and update our status page with the external message once it is available.
-
+1. Follow up with the customer that post-tasks have fixed the issue and everything is all clear.
 
 ## Reviewing the Incident
 It's important that we review the incident in detail to see exactly what went wrong, why it went wrong, and what we can do to make sure it doesn't happen again. These take many names; after-action reviews, incident review, followup review, etc. We use the term post-mortem.

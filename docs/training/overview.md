@@ -1,4 +1,4 @@
-Learning about the PagerDuty major incident response process is an important part of being an effective on-call engineer at PagerDuty. This section goes over our training material for the various roles that are involved in our incident response, along with some additional information and training material from government agencies.
+Learning about the MNX Solution's major incident response process is an important part of being an effective on-call engineer at MNX Solutions. This section goes over our training material for the various roles that are involved in our incident response, along with some additional information and training material from government agencies.
 
 ## Training Guides
 Our training guides are split up by role, however you are encouraged to read through the training guides even for roles you don't belong to, as it can give you some good insight into how those people will be behaving during major incidents.

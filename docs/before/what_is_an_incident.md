@@ -3,28 +3,23 @@ Before we can define our incident response process, we should first define what 
 ![Incident](../assets/img/headers/server_incident.png)
 
 ## What is an incident?
-Any unplanned disruption or degradation of service that is actively affecting customers ability to use PagerDuty.
+Any unplanned disruption or degradation of service that is actively affecting customers ability to use/connect to their servers, websites, applications, etc...
 
 ## What is a major incident?
-Any incident that requires a co-ordinated response between multiple teams.
+Any incident that requires a severe downtime or possible data loss (IE, corrupted MySQL database, server crash and data loss, etc...)
 
 ## What triggers our incident response process?
-Our incident response process should be initiated for any major incident. It provides a framework for effectively responding and reaching a fast resolution time. Our incident response process can be triggered one of two ways, either via automated monitoring and alerting, or manually via human action.
+Our incident response process should be initiated for any incident that draws a page. It provides a framework for effectively responding and reaching a fast resolution time. Our incident response process can be triggered one of two ways, either via automated monitoring and alerting, or manually via human action/Zendesk ticket created by a customer.
 
 ### Automated Monitoring
 Throughout our system, we monitor various metrics to determine if our system is in a state which would require a co-ordinated human response in order to resolve. To determine which metrics we monitor, and what to monitor them for, we ask ourselves these questions. If the answer to any is "No", then we should trigger our incident response process.
 
-1. Can customers perform all incident response functions provided by PagerDuty, across all platforms?
-    * e.g. Can customers acknowledge, reassign, and resolve incidents via every supported method?
-1. Are customers receiving notifications within SLA?
+1. Can customers hit their websites/applications?
+1. If a Application/Service goes down, would things still run smoothly.
+    * e.g. If cron jobs fail, or people not able to connect or view certain pages, would things still be ok?
 
 ### Human Escalation
-Automatic monitoring is only part of the process. We may have parts of our functionality which lack the necessary monitoring. It's important to still be able to trigger a coordinated incident response in those cases. For example, if our Support team start to receive requests that indicate a system issue, they need to have the power to trigger our response. Any PagerDuty employee has the ability to trigger our incident response process at any time.
-
-We trigger on any unplanned disruption or degradation of service to which any PagerDuty employee deems necessary of requiring co-ordinated incident response.
-
-!!! question "Is a response required?"
-    If you are unsure of whether response is required, trigger our incident response process. All you need to do to start the process is page an IC in Slack with `!ic page`.
+Automatic monitoring is only part of the process. We may have parts of our functionality which lack the necessary monitoring. It's important to still be able to trigger a coordinated incident response in those cases. For example, if a customer has a issue connecting to a website/server or pulling up something specific/important (maybe firewall rule or even web issue only directly related to that customer), they still need to have the power to trigger a page (this can only be done by customers through the [Support Portal](https://support.mnxsolutions.com) and by setting the new ticket priority or updating a previous ticket priority to High/Urgent) to get some help/assistance. *NOTE: If it is a mnx.io customer, they would submit this through the [OPS Portal](https://ops.mnx.io) by navigating to helpdesk page at the top right and then by checking the (is your server down check box).
 
 ## Incident Severity
 Our [severity definitions](/before/severity_levels.md) determine how severe we _think_ an incident is, based on some pre-defined guidelines. The intent is to guide responders on the type of response they can provide. For example, the higher the severity, the riskier the decisions you can take to return the system to normal.

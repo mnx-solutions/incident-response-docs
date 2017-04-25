@@ -1,4 +1,4 @@
-This is a standard template we use for post-mortems at PagerDuty. Each section describes the type of information you will want to put in that section.
+This is a standard template we use for post-mortems at MNX Solutions. Each section describes the type of information you will want to put in that section.
 
 ---
 
@@ -11,7 +11,7 @@ This is a standard template we use for post-mortems at PagerDuty. Each section d
 
 ** Meeting Scheduled For:** _Schedule the meeting on the "Incident Post-Mortem Meetings" shared calendar, for within 5 business days after the incident. Put the date/time here._
 
-** Call Recording:** _Link to the incident call recording._
+** Call Recording: (if applicable)** _Link to the incident call recording._
 
 ## Overview
 _Include a **short** sentence or two summarizing the root cause, timeline summary, and the impact. E.g. "On the morning of August 99th, we suffered a 1 minute SEV-1 due to a runaway process on our primary database machine. This slowness caused roughly 0.024% of alerts that had begun during this time to be delivered out of SLA."_
@@ -30,8 +30,8 @@ _Be very specific here, include exact numbers._
 
 | | |
 |-|-|
-| Time in SEV-1 | ?mins |
-| Time in SEV-2 | ?mins |
+| Time in Critical | ?mins |
+| Time in High | ?mins |
 | Notifications Delivered out of SLA | ??% (?? of ??) |
 | Events Dropped / Not Accepted | ??% (?? of ??) _Should usually be 0, but always check_ |
 | Accounts Affected | ?? |
@@ -40,13 +40,12 @@ _Be very specific here, include exact numbers._
 
 ## Responders
 
-* _Who was the IC?_
-* _Who was the scribe?_
+* _Who was the On Call Person?_
 * _Who else was involved?_
 * _Who else was involved?_
 
 ## Timeline
-_Some important times to include: (1) time the root cause began, (2) time of the page, (3) time that the status page was updated (i.e. when the incident became public), (4) time of any significant actions, (5) time the SEV-2/1 ended, (6) links to tools/logs that show how the timestamp was arrived at._
+_Some important times to include: (1) time the root cause began, (2) time of the page, (3) time that the status page was updated (i.e. when the incident became public), (4) time of any significant actions, (5) time the Critical/High priority ended, (6) links to tools/logs that show how the timestamp was arrived at._
 
 | Time (UTC) | Event | Data Link |
 | ---------- | ----- | --------- |
@@ -62,7 +61,7 @@ _Some important times to include: (1) time the root cause began, (2) time of the
 * _List anything you think we didn't do very well. The intent is that we should follow up on all points here to improve our processes._
 
 ## Action Items
-_Each action item should be in the form of a JIRA ticket, and each ticket should have the same set of two tags:  “sev1_YYYYMMDD” (such as sev1_20150911) and simply “sev1”. Include action items such as: (1) any fixes required to prevent the root cause in the future, (2) any preparedness tasks that could help mitigate the problem if it came up again, (3) remaining post-mortem steps, such as the internal email, as well as the status-page public post, (4) any improvements to our incident response process._
+_Each action item should be in the form of a ticket or Asana Project, and each ticket should have the same set of two tags:  “critical_YYYYMMDD” (such as critical_20150911) and simply “critical”. Include action items such as: (1) any fixes required to prevent the root cause in the future, (2) any preparedness tasks that could help mitigate the problem if it came up again, (3) remaining post-mortem steps, such as the internal email, as well as the status-page public post, (4) any improvements to our incident response process._
 
 ## Messaging
 
@@ -72,7 +71,7 @@ _This is a follow-up for employees. It should be sent out right after the post-m
 > Briefly summarize what happened and where the post-mortem page (this page) can be found.
 
 ### External Message
-_This is what will be included on the status.pagerduty.com website regarding this incident. What are we telling customers, including an apology? (The apology should be genuine, not rote.)_
+_This is what will be included on the status.mnx.io website regarding this incident. What are we telling customers, including an apology? (The apology should be genuine, not rote.)_
 
 > Summary
 

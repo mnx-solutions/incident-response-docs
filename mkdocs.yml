@@ -38,9 +38,9 @@ pages:
   - Before an Incident:
     - What is an Incident?: 'before/what_is_an_incident.md'
     - Severity Levels: 'before/severity_levels.md'
-    - Different Roles: 'before/different_roles.md'
-    - Call Etiquette: 'before/call_etiquette.md'
-    - Complex Incidents: 'before/complex_incidents.md'
+#    - Different Roles: 'before/different_roles.md'
+#    - Call Etiquette: 'before/call_etiquette.md'
+#    - Complex Incidents: 'before/complex_incidents.md'
   - During an Incident:
     - During an Incident: 'during/during_an_incident.md'
     - Security Incident: 'during/security_incident_response.md'
@@ -58,7 +58,7 @@ pages:
     - Glossary: 'training/glossary.md'
   - Additional Resources:
     - Reading: 'resources/reading.md'
-    - ChatOps: 'resources/chatops.md'
+#    - ChatOps: 'resources/chatops.md'
   - About: 'about.md'
 
 # Analytics
